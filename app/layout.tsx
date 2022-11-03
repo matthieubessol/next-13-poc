@@ -1,9 +1,12 @@
 import React from "react";
-import "../styles/globals.css"
+import { Inter } from "@next/font/google";
+import "../styles/globals.css";
 
-export default function Layout({ children }: {children: React.ReactNode}) {
+const inter = Inter();
+
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html className={inter.className}>
       <head>
         <title>RFC Layout test</title>
       </head>
