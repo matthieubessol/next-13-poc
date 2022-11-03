@@ -6,7 +6,7 @@ export default function CoverHeaderLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body>
+    <>
       <header className="bg-gray-800 p-4 flex gap-10">
         <span>Header cover</span>
         <nav className="gap-2 flex" >
@@ -15,6 +15,6 @@ export default function CoverHeaderLayout({
         </nav>
       </header>
       <main className="p-4">{children}</main>
-    </body>
+    </>
   );
 }

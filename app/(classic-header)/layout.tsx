@@ -4,7 +4,7 @@ import { use } from "react";
 import { Carousel } from "../../pages/api/carousels";
 
 async function getCarousels() {
-  const res = await fetch("http://localhost:3001/api/carousels");
+  const res = await fetch("http://localhost:3000/api/carousels");
   return res.json();
 }
 
@@ -16,7 +16,7 @@ export default function ClassicHeaderLayout({
   const carousels: [Carousel] = use(getCarousels());
 
   return (
-    <body>
+    <>
       <header className="bg-green-800 p-4 flex gap-10">
         <span>Header classique</span>
         <nav className="gap-2 flex">
@@ -44,6 +44,6 @@ export default function ClassicHeaderLayout({
         </ul>
         {children}
       </main>
-    </body>
+    </>
   );
 }
