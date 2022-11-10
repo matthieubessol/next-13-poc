@@ -5,7 +5,7 @@ export const config = {
   runtime: "experimental-edge",
 };
 
-export default function OgImage () {
+export default function OgImage() {
   return new ImageResponse(
     (
       <div
@@ -20,23 +20,68 @@ export default function OgImage () {
           justifyContent: "center",
         }}
       >
-        
-        <img alt="frank" src="https://media.senscritique.com/media/media/000020842494/0/avatar.jpg" width="100%" className="object-cover"/>
-        <div style={{
-          background: "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0) 100%, rgba(9,9,121,0) 100%, rgba(9,9,121,1) 100%)",
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          left: 0
-        }} />
-        <p style={{
-          color: "white",
-          position: "absolute",
-          bottom: '20px',
-          left: '20px',
-          margin: 0, padding:0
-        }}>Mdrjpptchou a mis 8/10</p>
+        <img
+          alt="frank"
+          src="https://media.senscritique.com/media/000020678578/1200/pacifiction_tourment_sur_les_iles.jpg"
+          width="100%"
+          height="600px"
+          style={{ objectFit: "cover" }}
+        />
+        <div
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%)",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+          }}
+        />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            position: "absolute",
+            left: "80px",
+            bottom: "80px",
+          }}
+        >
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
+          <img
+            src="https://media.senscritique.com/media/media/000021005920/170x170/avatar.jpg"
+            style={{
+              width: "150px",
+              height: "150px",
+              borderRadius: "50%",
+              border: "4px solid rgb(0, 255, 83)",
+              zIndex: "1",
+            }}
+          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "rgba(0,0,0,0.3)",
+              border: "4px solid rgb(0, 255, 83)",
+              width: "250px",
+              height: "130px",
+              marginLeft: "20px",
+              zIndex: "0",
+            }}
+          >
+            <span
+              style={{
+                fontSize: 100,
+                fontWeight: "bold",
+                color: "rgb(0, 255, 83)",
+              }}
+            >
+              8
+            </span>
+          </div>
+        </div>
       </div>
     ),
     {
